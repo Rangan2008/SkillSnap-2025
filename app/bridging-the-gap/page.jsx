@@ -230,7 +230,7 @@ function BridgingTheGapContent() {
       <main className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <Loader className="animate-spin text-blue-600 mx-auto mb-4" size={48} />
-          <p className="text-gray-600">Loading your personalized roadmap...</p>
+          <p className="text-gray-600 dark:text-white">Loading your personalized roadmap...</p>
         </div>
       </main>
     )
@@ -245,11 +245,11 @@ function BridgingTheGapContent() {
               <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Upload className="text-blue-600" size={40} />
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-3">No Resume Analysis Found</h2>
-              <p className="text-gray-600 mb-2">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">No Resume Analysis Found</h2>
+              <p className="text-gray-600 dark:text-white mb-2">
                 You haven't uploaded and analyzed a resume yet.
               </p>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-500 dark:text-white">
                 Upload your resume to get a personalized AI-powered learning roadmap.
               </p>
             </div>
@@ -291,10 +291,10 @@ function BridgingTheGapContent() {
   return (
     <main className="min-h-screen ">
       {/* Header */}
-      <div className="border-b ">
+      <div className="border-b dark:border-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <h1 className="text-3xl font-bold text-gray-900">Bridge Your Skills Gap</h1>
-          <p className="mt-1 text-sm text-gray-600">Select a skill to view personalized learning roadmap</p>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Bridge Your Skills Gap</h1>
+          <p className="mt-1 text-sm text-gray-600 dark:text-white">Select a skill to view personalized learning roadmap</p>
         </div>
       </div>
 
@@ -304,16 +304,16 @@ function BridgingTheGapContent() {
           <div className="mb-8 bg-blue-50 border-2 border-blue-200 rounded-2xl p-6">
             <div className="flex items-start justify-between">
               <div>
-                <h2 className="text-lg font-bold text-blue-900 mb-1">
+                <h2 className="text-lg font-bold text-blue-900 dark:text-black mb-1">
                   AI-Generated Learning Path for {data.jobRole}
                 </h2>
-                <p className="text-blue-700 text-sm">
+                <p className="text-blue-700 dark:text-black text-sm">
                   Personalized roadmap based on your resume analysis • {data.missingSkills.length} skills to master
                 </p>
               </div>
               <div className="text-right">
-                <div className="text-2xl font-bold text-blue-900">{data.matchPercent}%</div>
-                <div className="text-xs text-blue-700">Match Score</div>
+                <div className="text-2xl font-bold text-blue-900 dark:text-black">{data.matchPercent}%</div>
+                <div className="text-xs text-blue-700 dark:text-black">Match Score</div>
               </div>
             </div>
           </div>
@@ -340,9 +340,9 @@ function BridgingTheGapContent() {
                   </div>
                   <ChevronRight className="text-gray-400" size={24} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{skill}</h3>
-                <p className="text-gray-600 text-sm">Click to view learning roadmap and resources</p>
-                <div className="mt-4 flex items-center gap-2 text-sm text-blue-600 font-medium">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{skill}</h3>
+                <p className="text-gray-600 dark:text-white text-sm">Click to view learning roadmap and resources</p>
+                <div className="mt-4 flex items-center gap-2 text-sm text-blue-600 dark:text-white font-medium">
                   <span>View Roadmap</span>
                   <ChevronRight size={16} />
                 </div>
@@ -364,7 +364,7 @@ function BridgingTheGapContent() {
                 setSelectedSkill(null)
                 setSelectedRoadmapItem(null)
               }}
-              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-medium"
+              className="flex items-center gap-2 text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-gray-200 font-medium"
             >
               <ChevronRight className="rotate-180" size={20} />
               Back to Skills
@@ -377,11 +377,11 @@ function BridgingTheGapContent() {
                   <Code className="text-white" size={32} />
                 </div>
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900">{selectedSkill}</h2>
-                  <p className="text-gray-600">Learning Roadmap</p>
+                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{selectedSkill}</h2>
+                  <p className="text-gray-600 dark:text-white">Learning Roadmap</p>
                 </div>
               </div>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-white">
                 Follow this structured path to master {selectedSkill}. Click on any step to view detailed resources and video tutorials.
               </p>
             </div>
@@ -414,16 +414,16 @@ function BridgingTheGapContent() {
                         <div className="flex-1">
                           <div className="flex items-start justify-between">
                             <div>
-                              <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-purple-600 transition-colors">
+                              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
                                 {item.title}
                               </h3>
-                              <p className="text-gray-600 text-sm mb-2">{item.desc}</p>
+                              <p className="text-gray-600 dark:text-white text-sm mb-2">{item.desc}</p>
                               <div className="flex items-center gap-4 text-sm">
-                                <span className="inline-flex items-center gap-1 text-blue-600">
+                                <span className="inline-flex items-center gap-1 text-blue-600 dark:text-white">
                                   <BookOpen size={16} />
                                   {item.resources.length} Resources
                                 </span>
-                                <span className="text-gray-500">⏱ {item.duration}</span>
+                                <span className="text-gray-500 dark:text-white">⏱ {item.duration}</span>
                                 {item.status && item.status !== 'not_started' && (
                                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${item.status === 'completed'
                                     ? 'bg-green-100 text-green-800'
@@ -446,8 +446,8 @@ function BridgingTheGapContent() {
               ) : (
                 <div className="text-center py-12 bg-gray-50 rounded-2xl">
                   <BookOpen className="mx-auto text-gray-400 mb-4" size={48} />
-                  <p className="text-gray-600">No roadmap available for this skill yet.</p>
-                  <p className="text-sm text-gray-500 mt-2">The AI is still generating personalized resources.</p>
+                  <p className="text-gray-600 dark:text-white">No roadmap available for this skill yet.</p>
+                  <p className="text-sm text-gray-500 dark:text-white mt-2">The AI is still generating personalized resources.</p>
                 </div>
               )}
             </div>
@@ -497,7 +497,7 @@ function BridgingTheGapContent() {
 
                 {/* Modal Body */}
                 <div className="p-6 overflow-y-auto flex-1">
-                  <h4 className="text-lg font-bold text-gray-900 mb-4">Learning Resources</h4>
+                  <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Learning Resources</h4>
                   <div className="space-y-3">
                     {selectedRoadmapItem.resources.map((resource, idx) => (
                       <a
@@ -523,13 +523,13 @@ function BridgingTheGapContent() {
                             )}
                           </div>
                           <div className="flex-1">
-                            <h5 className="font-semibold text-gray-900 group-hover:text-black transition-colors">
+                            <h5 className="font-semibold text-gray-900 dark:text-white group-hover:text-black dark:group-hover:text-gray-200 transition-colors">
                               {resource.title}
                             </h5>
                             {resource.channel && (
-                              <p className="text-sm text-gray-600 mt-1">{resource.channel}</p>
+                              <p className="text-sm text-gray-600 dark:text-white mt-1">{resource.channel}</p>
                             )}
-                            <div className="mt-2 inline-flex items-center gap-2 text-sm text-gray-900 font-medium">
+                            <div className="mt-2 inline-flex items-center gap-2 text-sm text-gray-900 dark:text-white font-medium">
                               <span>{resource.type === 'video' ? 'Watch Video' : 'Read Documentation'}</span>
                               <ChevronRight size={16} />
                             </div>
@@ -554,7 +554,7 @@ export default function BridgingTheGap() {
       <main className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary mx-auto"></div>
-          <p className="mt-4 text-gray-600">Loading...</p>
+          <p className="mt-4 text-gray-600 dark:text-white">Loading...</p>
         </div>
       </main>
     }>
