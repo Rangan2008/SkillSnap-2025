@@ -236,7 +236,7 @@ npm install
 Create `.env.local`:
 ```env
 # MongoDB
-MONGODB_URI=mongodb+srv://user:pass@cluster.mongodb.net/impetus
+MONGODB_URI=Connection Link
 
 # Firebase
 NEXT_PUBLIC_FIREBASE_API_KEY=your_key
@@ -454,3 +454,4 @@ theme: {
 [⬆ Back to Top](#impetus---skillsnap)
 
 </div>
+
