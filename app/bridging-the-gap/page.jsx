@@ -497,7 +497,7 @@ function BridgingTheGapContent() {
 
                 {/* Modal Body */}
                 <div className="p-6 overflow-y-auto flex-1">
-                  <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Learning Resources</h4>
+                  <h4 className="text-lg font-bold text-gray-900 dark:text-black mb-4">Learning Resources</h4>
                   <div className="space-y-3">
                     {selectedRoadmapItem.resources.map((resource, idx) => (
                       <a
@@ -523,13 +523,13 @@ function BridgingTheGapContent() {
                             )}
                           </div>
                           <div className="flex-1">
-                            <h5 className="font-semibold text-gray-900 dark:text-white group-hover:text-black dark:group-hover:text-gray-200 transition-colors">
+                            <h5 className="font-semibold text-gray-900 dark:text-black group-hover:text-black transition-colors">
                               {resource.title}
                             </h5>
                             {resource.channel && (
-                              <p className="text-sm text-gray-600 dark:text-white mt-1">{resource.channel}</p>
+                              <p className="text-sm text-gray-600 dark:text-black mt-1">{resource.channel}</p>
                             )}
-                            <div className="mt-2 inline-flex items-center gap-2 text-sm text-gray-900 dark:text-white font-medium">
+                            <div className="mt-2 inline-flex items-center gap-2 text-sm text-gray-900 dark:text-black font-medium">
                               <span>{resource.type === 'video' ? 'Watch Video' : 'Read Documentation'}</span>
                               <ChevronRight size={16} />
                             </div>
