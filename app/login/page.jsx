@@ -154,7 +154,7 @@ export default function LoginPage(){
             className="mt-6 w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <FaGoogle className="text-red-500" size={20} />
-            <span className="font-medium">Continue with Google</span>
+            <span className="font-medium dark:hover:text-black">Login with Google</span>
           </button>
 
           <div className="mt-6 relative">
@@ -200,3 +200,4 @@ export default function LoginPage(){
     </main>
   )
 }
+
