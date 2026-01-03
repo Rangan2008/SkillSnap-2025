@@ -56,11 +56,11 @@ function CircularProgress({ percentage }) {
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-6xl font-bold text-gray-900 dark:text-white"
+          className="text-6xl font-bold text-gray-900 dark:text-black"
         >
           {Math.round(percentage)}%
         </motion.div>
-        <div className="text-sm text-gray-500 dark:text-gray-400 mt-2">Match Score</div>
+        <div className="text-sm text-gray-500 dark:text-black mt-2">Match Score</div>
       </div>
     </div>
   )
@@ -152,7 +152,7 @@ function AnalysisContent() {
       <main className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary mx-auto"></div>
-          <p className="mt-4 text-gray-600 dark:text-gray-300">Loading analysis...</p>
+          <p className="mt-4 text-gray-600 dark:text-black">Loading analysis...</p>
         </div>
       </main>
     )
@@ -163,7 +163,7 @@ function AnalysisContent() {
       <main className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary mx-auto"></div>
-          <p className="mt-4 text-gray-600 dark:text-gray-300">Loading analysis...</p>
+          <p className="mt-4 text-gray-600 dark:text-black">Loading analysis...</p>
         </div>
       </main>
     )
@@ -174,7 +174,7 @@ function AnalysisContent() {
       <main className="min-h-screen flex items-center justify-center p-4">
         <div className="max-w-md w-full text-center">
           <AlertTriangle size={64} className="text-red-500 mx-auto mb-4" />
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Unable to Load Analysis</h1>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-black mb-2">Unable to Load Analysis</h1>
           <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
             <p className="text-red-700 text-sm">{error || 'Analysis data could not be retrieved.'}</p>
           </div>
@@ -182,11 +182,11 @@ function AnalysisContent() {
             <Link href="/upload-resume" className="block w-full animated-btn animated-btn--primary">
               Upload New Resume
             </Link>
-            <Link href="/dashboard" className="block w-full text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white underline text-sm">
+            <Link href="/dashboard" className="block w-full text-gray-600 dark:text-black hover:text-gray-900 dark:hover:text-black underline text-sm">
               Back to Dashboard
             </Link>
           </div>
-          <div className="mt-6 text-xs text-gray-500 dark:text-gray-400">
+          <div className="mt-6 text-xs text-gray-500 dark:text-black">
             <p>If this problem persists, please contact support.</p>
           </div>
         </div>
@@ -197,11 +197,11 @@ function AnalysisContent() {
   return (
     <main className="min-h-screen">
       {/* Header Section */}
-      <div className="border-b border-gray-200">
+      <div className="border-b border-gray-200 dark:border-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Resume Skill Match Result</h1>
-            <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">AI-powered analysis based on your uploaded resume</p>
+            <p className="mt-1 text-sm text-gray-600 dark:text-white">AI-powered analysis based on your uploaded resume</p>
           </div>
         </div>
       </div>
@@ -223,17 +223,17 @@ function AnalysisContent() {
                 <FileText size={16} />
                 {data.fileName}
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-black mb-3">
                 Resume-JD Similarity: {data.similarityPercentage}%
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+              <p className="text-gray-600 dark:text-black leading-relaxed mb-4">
                 Your resume matches {data.similarityPercentage}% of the job description requirements. 
                 Focus on the missing skills below to increase alignment and improve your chances.
               </p>
               <div className="bg-gray-50 rounded-xl p-4 mb-4">
                 <div className="flex items-start gap-2">
                   <div className="text-sm">
-                    <span className="font-semibold text-gray-900 dark:text-white">ATS Score: </span>
+                    <span className="font-semibold text-gray-900 dark:text-black">ATS Score: </span>
                     <span className="font-bold text-primary">{data.atsScore}/100</span>
                   </div>
                 </div>
@@ -241,11 +241,11 @@ function AnalysisContent() {
               <div className="flex flex-wrap gap-3">
                 <div className="flex items-center gap-2 text-sm">
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  <span className="text-gray-600 dark:text-gray-300">{data.skillsFound.length} Skills Found</span>
+                  <span className="text-gray-600 dark:text-black">{data.skillsFound.length} Skills Found</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <span className="text-gray-600 dark:text-gray-300">{data.missingSkills.length} Skills Missing</span>
+                  <span className="text-gray-600 dark:text-black">{data.missingSkills.length} Skills Missing</span>
                 </div>
               </div>
             </div>
@@ -266,8 +266,8 @@ function AnalysisContent() {
                 <CheckCircle className="text-green-600 dark:text-green-300" size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">Skills Found</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Great! You have these skills</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-black">Skills Found</h3>
+                <p className="text-sm text-gray-500 dark:text-black">Great! You have these skills</p>
               </div>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -298,8 +298,8 @@ function AnalysisContent() {
                 <AlertTriangle className="text-red-600 dark:text-red-300" size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">Missing Skills</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Work on these to improve your score</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-black">Missing Skills</h3>
+                <p className="text-sm text-gray-500 dark:text-black">Work on these to improve your score</p>
               </div>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -337,10 +337,10 @@ function AnalysisContent() {
                 </svg>
                 ATS Compatibility Score
               </div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-black mb-3">
                 Your ATS Score: {Math.round(data.atsScore)}/100
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+              <p className="text-gray-600 dark:text-black leading-relaxed mb-6">
                 {data.atsScore > 90 ? (
                   "Excellent! Your resume is well-optimized for Applicant Tracking Systems. It has a high chance of passing automated screenings and reaching human recruiters."
                 ) : (
@@ -378,7 +378,7 @@ function AnalysisContent() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="bg-white rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] p-8 md:p-12 text-center text-gray-900 relative overflow-hidden"
+          className="bg-white rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] p-8 md:p-12 text-center text-gray-900 dark:text-black relative overflow-hidden"
         >
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-gray-300 rounded-full opacity-10 blur-3xl"></div>
@@ -388,8 +388,8 @@ function AnalysisContent() {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gray-700 to-black rounded-2xl mb-6">
               <TrendingUp size={32} className="text-white" />
             </div>
-            <h2 className="text-3xl font-bold mb-3">Want to bridge the skill gap?</h2>
-            <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-3 dark:text-black">Want to bridge the skill gap?</h2>
+            <p className="text-gray-600 dark:text-black text-lg mb-8 max-w-2xl mx-auto">
               Get a personalized learning path for your missing skills. Our AI-powered recommendations will help you master the skills you need.
             </p>
             <Link
@@ -427,8 +427,8 @@ function AnalysisContent() {
           >
             <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
               <div>
-                <h3 className="text-xl font-bold text-gray-900">ATS Optimization Guide</h3>
-                <p className="text-sm text-gray-500">Recommended fixes for your resume</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-black">ATS Optimization Guide</h3>
+                <p className="text-sm text-gray-500 dark:text-black">Recommended fixes for your resume</p>
               </div>
               <button
                 onClick={() => setShowFixPanel(false)}
@@ -444,8 +444,8 @@ function AnalysisContent() {
               {/* ATS Score Explanation - moved here */}
               {data.atsScoreExplanation && (
                 <div className="mb-6 p-4 bg-blue-50 border-l-4 border-blue-400 rounded">
-                  <div className="font-semibold text-blue-900 mb-2">AI ATS Score Explanation</div>
-                  <div className="text-gray-700 text-sm whitespace-pre-line">{data.atsScoreExplanation}</div>
+                  <div className="font-semibold text-blue-900 dark:text-black mb-2">AI ATS Score Explanation</div>
+                  <div className="text-gray-700 dark:text-black text-sm whitespace-pre-line">{data.atsScoreExplanation}</div>
                 </div>
               )}
               {/* Fix Items */}
@@ -532,7 +532,7 @@ function AnalysisContent() {
                     <div className="text-3xl flex-shrink-0">{fix.icon}</div>
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-2">
-                        <h4 className="font-semibold text-gray-900">{fix.title}</h4>
+                        <h4 className="font-semibold text-gray-900 dark:text-black">{fix.title}</h4>
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                           fix.color === 'red' ? 'bg-red-100 text-red-700' :
                           fix.color === 'yellow' ? 'bg-yellow-100 text-yellow-700' :
@@ -541,7 +541,7 @@ function AnalysisContent() {
                           {fix.priority}
                         </span>
                       </div>
-                      <p className="text-sm text-gray-600 leading-relaxed">{fix.description}</p>
+                      <p className="text-sm text-gray-600 dark:text-black leading-relaxed">{fix.description}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -570,7 +570,7 @@ export default function AnalysisPage() {
       <main className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary mx-auto"></div>
-          <p className="mt-4 text-gray-600">Loading analysis...</p>
+          <p className="mt-4 text-gray-600 dark:text-black">Loading analysis...</p>
         </div>
       </main>
     }>
