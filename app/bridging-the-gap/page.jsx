@@ -488,7 +488,7 @@ function BridgingTheGapContent() {
                     </div>
                     <button
                       onClick={() => setSelectedRoadmapItem(null)}
-                      className="p-2 hover:bg-gray-800 rounded-full transition-colors flex-shrink-0"
+                      className="p-2 hover:bg-gray-100 dark:hover:bg-black rounded-full transition-colors flex-shrink-0"
                     >
                       <X size={24} />
                     </button>
