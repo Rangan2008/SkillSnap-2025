@@ -159,10 +159,10 @@ export default function SignupPage(){
             type="button"
             onClick={handleGoogleSignup}
             disabled={loading}
-            className="mt-6 w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="mt-6 w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed group"
           >
             <FaGoogle className="text-red-500" size={20} />
-            <span className="font-medium dark:hover:text-black">Sign up with Google</span>
+            <span className="font-medium group-hover:text-black">Sign up with Google</span>
           </button>
 
           <div className="mt-6 relative">
@@ -212,7 +212,7 @@ export default function SignupPage(){
               <button type="submit" className="animated-btn animated-btn--primary w-full sm:w-auto text-center" disabled={loading}>
                 {loading ? 'Creating...' : 'Sign up'}
               </button>
-              <Link href="/login" className="text-sm text-primary">Already have an account?</Link>
+              <Link href="/login" className="text-sm text-white hover:text-black">Already have an account?</Link>
             </div>
           </form>
 
@@ -224,4 +224,3 @@ export default function SignupPage(){
     </main>
   )
 }
-
