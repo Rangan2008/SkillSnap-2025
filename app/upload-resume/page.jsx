@@ -250,7 +250,7 @@ export default function UploadResume() {
                     >
                       Browse Files
                     </button>
-                    <div className="mt-2 text-xs font-medium text-gray-500 dark:text-gray-300">PDF, DOC, DOCX • Max 10MB</div>
+                    <div className="mt-2 text-xs font-medium text-gray-500 dark:text-gray-300">Only PDF• Max 10MB</div>
                   </label>
                 ) : extracting.resume ? (
                   <div className="flex flex-col items-center gap-4">
@@ -512,3 +512,4 @@ export default function UploadResume() {
     </main>
   )
 }
+
