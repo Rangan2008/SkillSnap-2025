@@ -7,6 +7,8 @@ import { useRouter } from 'next/navigation'
 import { resumeApi } from '@/lib/api'
 import { useRequireAuth } from '@/lib/authClient'
 import { extractResumeTextClient, isBrowserCompatible } from '@/lib/clientResumeParser'
+import Lottie from 'lottie-react'
+import animationData from '@/public/lottie/animation.json'
 
 const ACCEPTED = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document']
 
@@ -199,6 +201,35 @@ export default function UploadResume() {
 
   return (
     <main className="min-h-screen flex items-center justify-center py-16 px-4">
+      {/* Loading Animation Overlay */}
+      {loading && (
+        <div className="fixed inset-0 bg-white/95 dark:bg-gray-900/95 z-50 flex flex-col items-center justify-center">
+          <div className="w-96 h-96">
+            <Lottie
+              animationData={animationData}
+              loop={true}
+              autoplay={true}
+            />
+          </div>
+          <div className="mt-8 text-center">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              Analyzing Your Resume
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Our AI is reviewing your resume and job description...
+            </p>
+            <div className="w-64 bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mx-auto">
+              <div 
+                className="bg-gradient-to-r from-primary to-purple-600 h-2.5 rounded-full transition-all duration-500"
+                style={{ width: `${uploadProgress}%` }}
+              ></div>
+            </div>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+              {uploadProgress}% Complete
+            </p>
+          </div>
+        </div>
+      )}
       <div className="max-w-6xl w-full">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white">AI-Powered Resume Analysis</h1>
@@ -250,7 +281,7 @@ export default function UploadResume() {
                     >
                       Browse Files
                     </button>
-                    <div className="mt-2 text-xs font-medium text-gray-500 dark:text-gray-300">Only PDF• Max 10MB</div>
+                    <div className="mt-2 text-xs font-medium text-gray-500 dark:text-gray-300">PDF, DOC, DOCX • Max 10MB</div>
                   </label>
                 ) : extracting.resume ? (
                   <div className="flex flex-col items-center gap-4">
@@ -271,7 +302,7 @@ export default function UploadResume() {
                       <div className="flex items-start gap-3">
                         <FileText size={20} className="text-green-600 flex-shrink-0 mt-0.5" />
                         <div className="flex-1 text-left">
-                          <div className="font-medium text-gray-900 dark:text-white break-all">{resumeFile.name}</div>
+                          <div className="font-medium text-gray-900 dark:text-black break-all">{resumeFile.name}</div>
                           <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                             {(resumeFile.size / 1024 / 1024).toFixed(2)} MB • {resumeText.length} characters
                           </div>
@@ -422,7 +453,7 @@ export default function UploadResume() {
                       <div className="flex items-start gap-3">
                         <Briefcase size={20} className="text-green-600 flex-shrink-0 mt-0.5" />
                         <div className="flex-1">
-                          <div className="font-medium text-gray-900 dark:text-white break-all">{jdFile.name}</div>
+                          <div className="font-medium text-gray-900 dark:text-black break-all">{jdFile.name}</div>
                           <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                             {(jdFile.size / 1024 / 1024).toFixed(2)} MB • {jdText.length} characters extracted
                           </div>
@@ -512,4 +543,3 @@ export default function UploadResume() {
     </main>
   )
 }
-
