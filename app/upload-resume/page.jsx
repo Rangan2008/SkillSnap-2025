@@ -475,19 +475,19 @@ export default function UploadResume() {
                 )}
               </div>
 
-              <div className="mt-6 bg-purple-50 dark:bg-purple-900 border border-purple-100 dark:border-purple-800 rounded-xl p-4">
-                <h3 className="text-sm font-bold text-gray-900 dark:text-purple-50 mb-3">💼 JD Tips</h3>
-                <ul className="space-y-2 text-xs font-medium text-gray-700 dark:text-purple-100">
+              <div className="mt-6 bg-green-50 dark:bg-green-900 border border-green-100 dark:border-green-800 rounded-xl p-4">
+                <h3 className="text-sm font-bold text-gray-900 dark:text-green-50 mb-3">💼 JD Tips</h3>
+                <ul className="space-y-2 text-xs font-medium text-gray-700 dark:text-green-100">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-0.5">•</span>
+                    <span className="text-green-600 mt-0.5">•</span>
                     <span>Copy full JD from job posting or upload file</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-0.5">•</span>
+                    <span className="text-green-600 mt-0.5">•</span>
                     <span>Include requirements & qualifications</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-0.5">•</span>
+                    <span className="text-green-600 mt-0.5">•</span>
                     <span>More detail = better AI analysis & matching</span>
                   </li>
                 </ul>
@@ -526,4 +526,3 @@ export default function UploadResume() {
     </main>
   )
 }
-
