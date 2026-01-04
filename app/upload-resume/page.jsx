@@ -502,23 +502,6 @@ export default function UploadResume() {
             </div>
           )}
 
-          {/* Progress Bar */}
-          {loading && (
-            <div className="mt-6">
-              <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-300 mb-2">
-                <span>Analyzing with AI...</span>
-                <span>{uploadProgress}%</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  className="bg-primary h-2 rounded-full transition-all duration-500"
-                  style={{ width: `${uploadProgress}%` }}
-                />
-              </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Comparing resume with JD and generating roadmap...</p>
-            </div>
-          )}
-
           {/* Submit Button */}
           <div className="mt-12 space-y-4">
             <button
@@ -543,3 +526,4 @@ export default function UploadResume() {
     </main>
   )
 }
+
