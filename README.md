@@ -111,9 +111,9 @@ SkillSnap provides:
 ### **5-Step Workflow**
 
 1. **📝 Upload Resume**
-2. **🎯 Select Target Role**
+2. **🎯 Give the JD of the Role**
 3. **🤖 AI Analysis**
-4. **📊 View Insights**
+4. **📊 Provides Insights**
 5. **🗺️ Follow Learning Roadmap**
 
 ---
@@ -146,4 +146,5 @@ SkillSnap provides:
 ---
 
 ## 📁 Project Structure
+
 
