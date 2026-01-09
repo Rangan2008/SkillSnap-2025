@@ -1,4 +1,8 @@
+<div align="center">
+
 # IMPETUS - SkillSnap
+
+</div>
 
 <div align="center">
 
@@ -454,4 +458,5 @@ theme: {
 [⬆ Back to Top](#impetus---skillsnap)
 
 </div>
+
 
